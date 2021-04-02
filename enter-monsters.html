@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Monsters</title>
+    <link rel="stylesheet" href="enter.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="logo">
+                <h1>Monster</h1> 
+                <img src="images/monster_match_logo.png">
+                <h1>Mash</h1>          
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Bet</a></li>
+                    <li><a href="#" class="active">Enter Monsters</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="center">
+                <form action="fake.html" method="POST">
+                    <div class="formWrap">
+                        <div class="monster1 monster">
+                            <div class="radio">
+                                <input type="checkbox" name="weightclass" value="1" id="demonoid" > Demonoid
+                            </div>
+    
+                            <img src="images/monster-1.png">
+                            
+                            <div class="text">
+                                <label for="name">Name: </label>
+                                <input type="text" name="name" id="name">
+                            </div>
+    
+                            <div class="text">
+                                <label for="special">Special Ability: </label>
+                                <input type="text" name="special" id="special">
+                            </div>
+    
+                            <div class="text">
+                                <label for="weight">Weight class: </label>
+                                <select id="winner" name="winner">
+                                    <option value="lightweight">lightweight: 100-200 lbs</option>
+                                    <option value="middleweight">middleweight: 201-300 lbs</option>
+                                    <option value="heavyweight">heavyweight: 301-400 lbs</option>
+                                </select>
+                            </div>
+                        </div>
+    
+                        <div class="monster2 monster">                  
+                            <div class="radio">
+                                <input type="checkbox" name="weightclass" value="2" id="octopoid" > Octopoid
+                            </div>
+        
+                            <img src="images/monster-2.png">
+                                
+                            <div class="text">
+                                <label for="name">Name: </label>
+                                <input type="text" name="name" id="oname">
+                            </div>
+        
+                            <div class="text">
+                                <label for="special">Special Ability: </label>
+                                <input type="text" name="special" id="special">
+                            </div>
+        
+                            <div class="text">
+                                <label for="weight">Weight class: </label>
+                                <select id="winner" name="winner">
+                                    <option value="lightweight">lightweight: 100-200 lbs</option>
+                                    <option value="middleweight">middleweight: 201-300 lbs</option>
+                                    <option value="heavyweight">heavyweight: 301-400 lbs</option>
+                                </select>
+                            </div>                  
+                        </div>
+    
+    
+                        <div class="monster3 monster">
+                            <div class="radio">
+                                <input type="checkbox" name="weightclass" value="3" id="bovoid" > Bovoid
+                            </div>
+                            
+                            <img src="images/monster-3.png">
+                            
+                            <div class="text">
+                                <label for="name">Name: </label>
+                                <input type="text" name="name" id="bname">
+                            </div>
+    
+                            <div class="text">
+                                <label for="special">Special Ability: </label>
+                                <input type="text" name="special" id="special">
+                            </div>
+    
+                            <div class="text">
+                                <label for="weight">Weight class: </label>
+                                <select id="winner" name="winner">
+                                    <option value="lightweight">lightweight: 100-200 lbs</option>
+                                    <option value="middleweight">middleweight: 201-300 lbs</option>
+                                    <option value="heavyweight">heavyweight: 301-400 lbs</option>
+                                </select>
+                            </div>                 
+                        </div>
+                    </div>
+                    
+
+                    <div class="centerBtn">
+                        <input type="submit" id="submitBtn" value="Enter Monster(s)">
+                    </div> 
+                </form>
+            </div>            
+        </main>
+        <footer>
+            <p>Another quality service by <em>Fly By Night Productions</em> &copy;</p>
+        </footer>
+    </div>     
+</body>
+
+<script>
+    document.getElementById("submitBtn").addEventListener("click", function(e) {
+        var demonoid = document.getElementById("demonoid");
+        var octopoid= document.getElementById("octopoid");
+        var bovoid = document.getElementById("bovoid");
+        e.preventDefault();
+
+        if (demonoid.checked == true) {
+            var name = document.getElementById("name");
+
+            if (name.value.length == 0) {
+                alert("Enter a name for demonoid");
+            }
+
+        }
+
+        if (octopoid.checked == true) {
+            var oName = document.getElementById("oname");
+
+            if (oName.value.length == 0) {
+                alert("Enter a name for octopoid");
+            }
+
+        }
+
+        if (bovoid.checked == true) {
+            var bName = document.getElementById("bname");
+
+            if (bName.value.length == 0) {
+                alert("Enter a name for bovoid");
+            }
+        }
+
+        if ((demonoid.checked == false) && (octopoid.checked == false) && (bovoid.checked == false)) {
+            alert("Please select a monster");
+        }
+    })
+</script>
+</html>

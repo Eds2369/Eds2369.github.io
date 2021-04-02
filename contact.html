@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="logo">
+                <h1>Monster</h1> 
+                <img src="images/monster_match_logo.png">
+                <h1>Mash</h1>          
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Bet</a></li>
+                    <li><a href="enter-monsters.html">Enter Monsters</a></li>
+                    <li><a href="#" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="message">
+                <p>Your business is not that important to us.</p>
+                <p>Please contact us so we can begin ignoring your messages as soon as possible.</p>
+                <p>If you persist in your attempts to contact us, a monster... I mean "customer service representative" will be dispatched to your location at our soonest convenience.</p>
+                
+            </div>
+
+            <div class="contact">
+                <form action="fake.html" method="POST">
+                    <div class="text">
+                        <label for="name">Name: </label>
+                        <input type="text" name="name" id="name" required>
+                    </div>
+
+                    <div class="text">
+                        <label for="Subject">Subject: </label>
+                        <input type="text" name="subject" id="subject" required>
+                    </div>
+
+                    <div class="text">
+                        <label for="messages">Message: </label>
+                        <textarea id="area" name="messages" rows="5" cols="50" required></textarea>
+                    </div>
+
+                    <div class="radio">
+                        <p>What is the nature of your message?</p>
+                        <div class="radios">
+                            <input type="radio" name="typeOfMessage" value="1" id="messageType1" > They cheated!
+                        </div>
+                        
+                        <div class="radios">
+                            <input type="radio" name="typeOfMessage" value="2" id="messageType2" > I lost fair and square... and I don't like it!
+                        </div>
+                        
+                        <div class="radios">
+                            <input type="radio" name="typeOfMessage" value="3" id="messageType3" > The other monster is too big (big, fast, strong, etc)!
+                        </div>
+                        
+                        <div class="radios">
+                            <input type="radio" name="typeOfMessage" value="4" id="messageType4" > I just like to whine
+                        </div>
+                        
+                        <div class="radios">
+                            <input type="radio" name="typeOfMessage" value="5" id="messageType5" checked> Other
+                        </div>
+                        
+                    </div>
+
+                    <div class="submit">
+                        <input type="submit" id="submitBtn" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <p>Another quality service by <em>Fly By Night Productions</em> &copy;</p>
+        </footer>
+    </div>
+</body>
+
+<script>
+    var names = document.getElementById("name");
+    var subject = document.getElementById("subject")
+    var textarea = document.getElementById("area")
+
+    
+document.getElementById("submitBtn").addEventListener("click", (e) => {
+    if((names.value.length > 0) && (subject.value.length > 0) && (textarea.value.length > 0)) {
+        e.preventDefault();
+    } 
+});
+
+</script>
+</html>
